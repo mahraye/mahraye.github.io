@@ -1,12 +1,12 @@
 $(window).on('load', function(){
 
 	"use strict";
-	
+
 
 	/* ========================================================== */
 	/*   Navigation Background Color                              */
 	/* ========================================================== */
-	
+
 	$(window).on('scroll', function() {
 		if($(this).scrollTop() > 450) {
 			$('.navbar-fixed-top').addClass('opaque');
@@ -14,21 +14,21 @@ $(window).on('load', function(){
 			$('.navbar-fixed-top').removeClass('opaque');
 		}
 	});
- 
-	
+
+
 	/* ========================================================== */
 	/*   Hide Responsive Navigation On-Click                      */
 	/* ========================================================== */
-	
+
 	  $(".navbar-nav li a").on('click', function(event) {
 	    $(".navbar-collapse").collapse('hide');
 	  });
 
-	
+
 	/* ========================================================== */
 	/*   Navigation Color                                         */
 	/* ========================================================== */
-	
+
 	$('#navbarCollapse').onePageNav({
 		filter: ':not(.external)'
 	});
@@ -37,20 +37,20 @@ $(window).on('load', function(){
 	/* ========================================================== */
 	/*   SmoothScroll                                             */
 	/* ========================================================== */
-	
+
 	$(".navbar-nav li a, a.scrool").on('click', function(e) {
-		
+
 		var full_url = this.href;
 		var parts = full_url.split("#");
 		var trgt = parts[1];
 		var target_offset = $("#"+trgt).offset();
 		var target_top = target_offset.top;
-		
+
 		$('html,body').animate({scrollTop:target_top -70}, 1000);
 			return false;
-		
+
 	});
-	
+
 
 	/* ========================================================== */
 	/*   Contact                                                  */
@@ -84,26 +84,25 @@ $(window).on('load', function(){
 		gallery: {
 		  enabled:true
 		}
-	}); 
-	
+	});
+
 	$('.popup-gallery').find('a.popup2').magnificPopup({
 		type: 'image',
 		gallery: {
 		  enabled:true
 		}
-	}); 
- 
+	});
+
 	$('.popup-gallery').find('a.popup3').magnificPopup({
 		type: 'image',
 		gallery: {
 		  enabled:true
 		}
-	}); 
- 
+	});
+
 	$('.popup-gallery').find('a.popup4').magnificPopup({
 		type: 'iframe',
 		gallery: {
 		  enabled:false
 		}
-	});  
- 
+	});

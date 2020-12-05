@@ -663,11 +663,20 @@
 
                 <h2 class="section-title">Middleware and Service</h2>
 
-
+                <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#Cloud" aria-expanded="false" aria-controls="collapseOne">
+                  <label class="btn btn-white active">
+                    <input type="checkbox" autocomplete="off"> Show Cloud and Autonomic Computing
+                  </label>
+                </button>
+                <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#SOAproject" aria-expanded="false" aria-controls="collapseOne">
+                  <label class="btn btn-white active">
+                    <input type="checkbox" autocomplete="off"> Show SOA Project
+                  </label>
+                </button>
             </div>
           </div>
 
-          <div class="row">
+          <div class="row collapse" id="Cloud">
             <div>
 
               <div class="col-md-12 text-center padding-top-10">
@@ -690,10 +699,15 @@
                 <a href="images/cloudReport.pdf" class="btn-Green small scrool">Download report</a>
 
                 <div class="col-md-12 text-center padding-top-10">
-                    <h5 > Knowledge and skills mobilized  </h5>
+                  <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsCloud" aria-expanded="false" aria-controls="collapseOne">
+                    <label class="btn btn-secondary active">
+                      <input type="checkbox" autocomplete="off"> Knowledge and skills mobilized
+                    </label>
+                  </button>
+
                     <!--begin progress-list -->
-                  <div class="d-flex justify-content-center">
-                    <ul class="progress-list">
+                  <div class=" d-flex justify-content-center" >
+                    <ul class="collapse progress-list" id="skillsCloud">
 
                         <li>
                             <p>Understand the concept of cloud computing</p>
@@ -733,7 +747,7 @@
       <div class="container">
           <!--begin row-->
 
-          <div class="row">
+          <div class="row collapse" id="SOAproject">
             <div>
 
               <div class="col-md-12 text-center padding-top-10">
@@ -775,8 +789,16 @@
                   <h5>OM2M Platforme</h5>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
               </div>
+              <div class="col-md-12 text-center padding-top-10">
+                      <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsSOA" aria-expanded="false" aria-controls="collapseOne">
+                        <label class="btn btn-secondary active">
+                          <input type="checkbox" autocomplete="off"> Knowledge and skills mobilized
+                        </label>
+                      </button>
+              </div>
               <div class="d-flex justify-content-center">
-                <ul class="progress-list ">
+
+                <ul class="progress-list collapse" id="skillsSOA">
 
 
 
@@ -825,10 +847,17 @@
 
 
               <div class="col-md-12 text-center padding-top-10">
-                  <h5 > Knowledge and skills mobilized </h5>
+                <div class="col-md-12 text-center padding-top-10">
+                        <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsWeb" aria-expanded="false" aria-controls="collapseOne">
+                          <label class="btn btn-secondary active">
+                            <input type="checkbox" autocomplete="off"> Knowledge and skills mobilized
+                          </label>
+                        </button>
+                </div>
+
                   <!--begin progress-list -->
                 <div class="d-flex justify-content-center">
-                  <ul class="progress-list ">
+                  <ul class="progress-list collapse" id="skillsWeb">
 
                       <li>
                           <p>Know how to define a Service Oriented Architecture</p>

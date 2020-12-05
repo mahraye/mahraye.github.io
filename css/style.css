@@ -1244,7 +1244,9 @@ a.btn-Green:visited, a.btn-red:focus{
 	color: #fff!important;
 }
 
-
+.hidden{
+	display:none;
+}
 
 
 
