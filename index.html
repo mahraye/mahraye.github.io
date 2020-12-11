@@ -805,7 +805,11 @@
                 </div>
                 <div class="row">
                   <h5>Jira: How we organized our project</h5>
-                  <p>To do that, we worked in agile using the tool Jira. It is  a project management tool allowing us to work in agile. Consequently, we organized the project in 3 sprints composed of userstories correponding to the different scenarios </p>
+                </div>
+                <div>
+
+                  <p>To do that, we worked in agile using the tool Jira. It is  a project management tool allowing us to work in agile. Consequently,
+                     we organized the project in 3 sprints composed of userstories correponding to the different scenarios. </p>
                   <p> The next figures show these sprints: </p>
                   <div class="col-md-12 text-center padding-top-10">
                           <figure class="figure">
@@ -828,10 +832,19 @@
                               <figcaption class="figure-caption">The third sprint done.</figcaption>
                           </figure>
                   </div>
+                  <div class="col-md-12 text-center padding-top-10">
+                          <figure class="figure">
+                              <img src="images/sprint4.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                alt="happy" style="width: 800px">
+                              <figcaption class="figure-caption">The fourth sprint done.</figcaption>
+                          </figure>
+                  </div>
                 </div>
 
               <div class="row">
                   <h5>OM2M Platform</h5>
+              </div>
+              <div>
                     <p>In order to monitor the sensors we set up an OM2M Platform which have all the ressources needed.
                        This platform has the following tree archetecture of ressources: </p>
 
@@ -842,17 +855,42 @@
                                    <figcaption class="figure-caption">OM2M ressource tree.</figcaption>
                                </figure>
                        </div>
-                       <p>We organized the elements by the locations platform AE (application entity). In each location there are the sensors and actuators containers. Each sensor/actuator contains its data CIN.  </p>
-                        <p>This platform was created by a java programme by using POST requests, it was easier than using a rest client (i.e Postman).</p>
+                       <p>We organized the elements by platforms AE (application entity). In each platform there are the sensors and actuators containers. Each sensor/actuator contains its data CIN.  </p>
+                        <p>This platforms were created by a java program by using POST requests, it was easier than using a rest client (i.e Postman). In fact, if the OM2M platform is destroyed, it is easier to rebuild it just by launching this program.
+                          It is really faster than resend all request in a REST client.</p>
               </div>
 
 
 
               <div class="row">
                   <h5>Web Services</h5>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. </p>
-              </div>
 
+              </div>
+                <p>In order to monitor this IoT platform we implemented web services. In fact, we created 3 types of services: </p>
+              <ul class="benefits">
+                <li><i class="fas fa-check"></i> Services to get a CIN's content of an actuator or a sensor </li>
+                  <div>
+                  <p> These services are simple: we just return the wanted content thanks to a get request. For instance to get the value of the temperature sensor:  </p>
+                  <div class="col-md-12 text-center padding-top-10">
+                          <figure class="figure">
+                              <img src="images/serviceTemp.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                alt="happy" style="width: 450px">
+
+                          </figure>
+                  </div>
+                  <p> When the sensor uses this service, he will get the sensor's value: </p>
+                  <div class="col-md-12 text-center padding-top-10">
+                          <figure class="figure">
+                              <img src="images/TempServiceResult.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                alt="happy" style="width: 450px">
+
+                          </figure>
+                  </div>
+                </div>
+                <li><i class="fas fa-check"></i> Services to set a CIN content of an actuator or a sensor </li>
+                <p> It is in these service where the analysis/monitoring of sensors and actuators are done in order to implement the diffrent scenarios</p>
+                <li> <i class="fas fa-check"></i>A general service that summarize the state of our actuators and sensors </li>
+              </ul>
 
               <div class="col-md-12 text-center padding-top-10">
                 <div class="col-md-12 text-center padding-top-10">
