@@ -869,7 +869,7 @@
                 <p>In order to monitor this IoT platform we implemented web services. In fact, we created 3 types of services: </p>
               <ul class="benefits">
                 <li><i class="fas fa-check"></i> Services to get a CIN's content of an actuator or a sensor </li>
-                  <div>
+                  <div class="row">
                   <p> These services are simple: we just return the wanted content thanks to a get request. For instance to get the value of the temperature sensor:  </p>
                   <div class="col-md-12 text-center padding-top-10">
                           <figure class="figure">
@@ -888,8 +888,43 @@
                   </div>
                 </div>
                 <li><i class="fas fa-check"></i> Services to set a CIN content of an actuator or a sensor </li>
-                <p> It is in these service where the analysis/monitoring of sensors and actuators are done in order to implement the diffrent scenarios</p>
+                <div class="row">
+                <p> It is in these service where the analysis/monitoring of sensors and actuators are done in order
+                  to implement the diffrent scenarios</p>
+                  <p> For instance to simulate the scenario "As a client, I want that the windows opened when outside temperature is lower(between 18 and 27°) than the indoor
+                    temperature so that it allows energy economy", when the temperature is set up to be simulated, there is a monitoring that is done:  </p>
+                    <div class="col-md-12 text-center padding-top-10">
+                            <figure class="figure">
+                                <img src="images/TempServiceSet.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                  alt="happy" style="width: 450px">
+
+                            </figure>
+                    </div>
+                    <p> As we can see the window is monitored depending on the temperature set.</p>
+
+                    <p>All others web services are detailled in the source code in the gitHub repository:</p>
+                    <span class="freelancer-main-details">GitHub</span><a href="https://github.com/KilianDesportes/softwareengineering_soa_iot" target="_blank"><span class="freelancer-second-details">SOArepository</span></a>
+                </div>
+
                 <li> <i class="fas fa-check"></i>A general service that summarize the state of our actuators and sensors </li>
+                <div class="row">
+                  <p> The purpose of this service is just to return the main informations avaiable from the OM2M platform.</p>
+                  <div class="col-md-12 text-center padding-top-10">
+                          <figure class="figure">
+                              <img src="images/RessourceService.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                alt="happy" style="width: 450px">
+
+                          </figure>
+                  </div>
+                  <p> Then when the user uses this service he will get the following output:</p>
+                  <div class="col-md-12 text-center padding-top-10">
+                          <figure class="figure">
+                              <img src="images/RessourceServiceResult.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                alt="happy" style="width: 450px">
+
+                          </figure>
+                  </div>
+                </div>
               </ul>
 
               <div class="col-md-12 text-center padding-top-10">
