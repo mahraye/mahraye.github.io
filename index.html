@@ -1021,6 +1021,19 @@
           </div>
       </div>
 
+
+      <!-- -------------------------------- Mobilized sikills------------------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
     </section>
 
 
@@ -1468,7 +1481,7 @@
                     <img class="img-responsive" width="350" height="200" src="images/hoverSensor.png" alt="">
                     <div class="overlay">
                         <h2>Sensor Manufacturing at AIME</h2>
-                       <a href="#SensorManu" class="info">  <h3>Discover</h3></a>
+                       <a class="info">  <h3>Discover</h3></a>
 
                     </div>
 
@@ -1484,7 +1497,7 @@
                     <img class="img-responsive" width="350" height="200" src="images/hoverAnalog.jpg" alt="">
                     <div class="overlay">
                             <h2>Analog Electronic Labs</h2>
-                       <a href="#AnalogElec" class="info"><h3>Discover</h3></a>
+                       <a class="info"><h3>Discover</h3></a>
                     </div>
                 </div>
 
@@ -1495,7 +1508,7 @@
 
 
               <div class="hovereffect">
-                  <img class="img-responsive" width="350" height="200" src="images/hoverSOA.jpg" alt="">
+                  <img class="img-responsive" width="350" height="200" src="images/hoverMosh.jpg" alt="">
                   <div class="overlay">
                           <h2>M&OSH</h2>
                      <a class="info"><h3>Discover</h3></a>
@@ -1514,8 +1527,14 @@
   </div>
 
 
+
   <div class="container" >
-      <!-- ------- SMA -------------- -->
+
+
+
+
+
+        <!-- ------- SMA -------------- -->
       <div class="row collapse" id="SensorManu">
         <div class="col-md-12 text-center padding-top-10">
             <h4 class="section-title"> Sensor Manufacturing at AIME</h4>
@@ -1619,36 +1638,38 @@
 
 
         <div class="col-md-12 text-center padding-top-10">
-                <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsSemantic" aria-expanded="false" aria-controls="collapseOne">
+                <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsSensor" aria-expanded="false" aria-controls="collapseOne">
                   <label class="btn btn-secondary active">
                     <input type="checkbox" autocomplete="off"> Knowledge and skills mobilized
                   </label>
                 </button>
                 <div class="d-flex justify-content-center">
 
-                  <ul class="progress-list collapse" id="skillsSemantic">
+                  <ul class="progress-list collapse" id="skillsSensor">
                                           <li>
-                                              <p><b>Design and understand a model for an application</b></p>
+                                              <p><b>Understand basic notions of sensors, data acquisition: physics, electronics and metrology point of view</b></p>
                                               <div class="progress" style="height: 20px;">
                                                   <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                               </div>
-                                              <p> With the theoretical lessons and their application in pratical labs, I understood the basis of the semantic data processing.</p>
+                                              <p> By having the opportunity to follow a sensor throughout its life cycle (with the exception of its end of life)
+                                                from the manufacturing to the its use in IoT. </p>
                                           </li>
 
                                           <li>
-                                              <p><b>Know how to infer new knowlegde from a knowledge base</b></p>
+                                              <p><b>Be able to manufacture a nano-particles sensor using micro-electronics tools: chemical synthesis, assembly, testing</b></p>
                                               <div class="progress" style="height: 20px;">
                                                   <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                               </div>
-                                              <p> In the first lab, we infred new knowledge by the reasoner "HermiT" which can deduce new knowledge from the relations between objects created in the ontology.</p>
+                                              <p>Thanks to the creation of our sensor in the AIME laboratory, we were able to create our own gas sensor using nanoparticles.
+                                                We followed the whole process of creation, up to the exploitation.</p>
                                           </li>
 
                                           <li>
-                                              <p><b>Be able to enrich data with semantic meta-data</b></p>
+                                              <p><b>Be able to design the datasheet of the sensor manufactured</b></p>
                                               <div class="progress" style="height: 20px;">
                                                   <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
                                               </div>
-                                              <p> During lab lessons on semantic web, we created a Java code which was able to automatically enrich data with semantic meta-data thanks to the ontology we had created.</p>
+                                              <p> We realized by group a Datasheet of the sensor we did at the AIME. I was used to read Datasheet and now I am able to write one.</p>
                                           </li>
 
 
@@ -1664,6 +1685,12 @@
 
 
       </div>
+
+
+
+
+
+
 
 
       <!--------- AEL------------------------>
@@ -1716,7 +1743,6 @@
           </div>
         </div>
 
-        <a href="images/bigDataReport.pdf" class="btn-Green small scrool">Download full report</a>
 
 
         <div class="col-md-12 text-center padding-top-10">
@@ -1754,6 +1780,174 @@
 
 
       </div>
+
+
+
+
+
+
+
+      <!--------- M&OSH------------------------>
+      <div class="row collapse" id="MOSH">
+        <div class="col-md-12 text-center padding-top-10">
+            <h3 class="section-title"> Microcontrollers & Open Source Hardware</h3>
+
+        </div>
+        <div class="row">
+          <p>After we manufactured the sensor, did the integration in an electronic circuit, the purpose
+             of this Microcontrollers & Open Source Hardware is to realise a connected gas sensor.
+             The system had to be able to send data over the web with Lora technology and had to be plug with a
+             special shield on an Arduino. The main part of this project were:</p>
+             <ul class="benefits">
+               <li><i class="fas fa-check"></i> Firstly, Create a custom Arduino Shield for the whole system </li>
+               <li><i class="fas fa-check"></i> Secondly, Send data to internet through a Lora radio </li>
+               <li> <i class="fas fa-check"></i>Finaly, Exploit received data with Node-Red</li>
+             </ul>
+        </div>
+        <div class="row">
+          <h4>Create a shield with Kicad</h4>
+        </div>
+        <div>
+          <p>In order to create a custom Arduino Shield that allows to accommodate all the elements, we used the
+            software Kicad. We integrated the electronic circuit and the chip that
+            enables us to communicate by LoRa (RN2483 chip).</p>
+            <div class="row">
+              <h5>Built Schematics:</h5>
+            </div>
+          <p>The first step in Kicad was to create all the schmatics needed. The next figure show our shematic :</p>
+            <div class="col-md-12 text-center padding-top-10">
+                    <figure class="figure">
+                        <img src="images/kicad1.png" class="image-shadow figure-img img-fluid z-depth-1"
+                          alt="happy" style="width: 800px">
+                        <figcaption class="figure-caption">shield's schmatic</figcaption>
+                    </figure>
+            </div>
+            <p>The shematic is composed of four parts: Amplifier stage (see the Analog Electronic Labs), LoRa chip (RN2483), Arduino chip, and the gas sensor connection.</p>
+            <div class="row">
+              <h5>Final PCB:</h5>
+            </div>
+
+          <p>Once the schematics done and connected all the pins of each element the final PCB can be built as follows: </p>
+          <div class="col-md-12 text-center padding-top-10">
+                  <figure class="figure">
+                      <img src="images/kicad2.png" class="image-shadow figure-img img-fluid z-depth-1"
+                        alt="happy" style="width: 600px">
+                      <figcaption class="figure-caption">Kicad PCB 2D view </figcaption>
+                  </figure>
+          </div>
+
+          <div class="col-md-12 text-center padding-top-10">
+                  <figure class="figure">
+                      <img src="images/kicad3.png" class="image-shadow figure-img img-fluid z-depth-1"
+                        alt="happy" style="width: 600px">
+                      <figcaption class="figure-caption">Kicad PCB 3D view </figcaption>
+                  </figure>
+          </div>
+          <div class="row">
+            <h4>Read the sensor data and send them through a LoRa radio</h4>
+          </div>
+          <p>Once our sensor manufactured and we got the its PCB for Arduino, we can now monitor its data.
+            In fact, we used an Arduino with a LoRa radio module (the RN2483) the build this connected gas sensor.
+          Then, we communicated with the a gateway situated at the roof of the GEI building.
+        To do that, we used The Things Network (TTN) library and implementd an Arduino code (C++) to send the GEI's gateway.
+      Consequently, we were abe to send the sensor data values and monitor them from the TNN server of the gateway. The next figure
+    shows some data monitored on the TTN server: </p>
+
+        <div class="col-md-12 text-center padding-top-10">
+                <figure class="figure">
+                    <img src="images/ttn.png" class="image-shadow figure-img img-fluid z-depth-1"
+                      alt="happy" style="width: 600px">
+                    <figcaption class="figure-caption">Gas sensor monitoring on TTN</figcaption>
+                </figure>
+        </div>
+        <div class="row">
+          <h4>Monitor the sensor data with Node-Red</h4>
+        </div>
+        <p>In order to get an user friendly interface, we built an Human-Machine interface by using Node-Red.
+          We created a dashboard that allows us to monitor the gas sensor's measurements, and display them in a
+        intuitive way for the user (graph/figure that shows the evolutions).</p>
+        <p> The next figure shows the Node-Red flow created: </p>
+        <div class="col-md-12 text-center padding-top-10">
+                <figure class="figure">
+                    <img src="images/node-red.png" class="image-shadow figure-img img-fluid z-depth-1"
+                      alt="happy" style="width: 600px">
+                    <figcaption class="figure-caption">Node-Red flow</figcaption>
+                </figure>
+        </div>
+        <p> It is composed of the payload reception (ttn uplink: from the TTN node-red library),
+          a function allowing us to decode the payload received from TNN, and the two intuitive
+          displays in the dashboard.</p>
+        <p> The next figure shows the final dashboard: </p>
+        <div class="col-md-12 text-center padding-top-10">
+                <figure class="figure">
+                    <img src="images/node-red2.png" class="image-shadow figure-img img-fluid z-depth-1"
+                      alt="happy" style="width: 600px">
+                    <figcaption class="figure-caption">Node-Red DashBoard HMI</figcaption>
+                </figure>
+        </div>
+        </div>
+
+        <div class="col-md-12 text-center padding-top-10">
+                <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsMosh" aria-expanded="false" aria-controls="collapseOne">
+                  <label class="btn btn-secondary active">
+                    <input type="checkbox" autocomplete="off"> Knowledge and skills mobilized
+                  </label>
+                </button>
+                <div class="d-flex justify-content-center">
+
+                  <ul class="progress-list collapse" id="skillsMosh">
+                                          <li>
+                                              <p><b>Be able to design data acquisition system (sensor, conditioner, microcontroller) with respect to the application</b></p>
+                                              <div class="progress" style="height: 20px;">
+                                                  <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                              <p>We built a complete smart device of a gas sensor. I am able to understand how this complete system work and how the data
+                                                acquisition can be done.</p>
+                                          </li>
+
+                                          <li>
+                                              <p><b>Be able to design a shield to accommodate the gas sensor </b></p>
+                                              <div class="progress" style="height: 20px;">
+                                                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 70%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                              <p> In order to get a system that enables a user to get the "plug and play concept": the users
+                                              only have to plug the created shield for Arduino and the sensor to use the sensor. So we made our own shield
+                                              and I understand how to use softwares as Kicad to do that.</p>
+                                          </li>
+
+                                          <li>
+                                              <p><b>Be abe to design the sofware to use the gas sensor and its HMI</b></p>
+                                              <div class="progress" style="height: 20px;">
+                                                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                              <p>I'm very familiar with the use of Arduino (C++) and NodeRed to design the software to use the a sensor
+                                                by doing the data acquisition and monitor this data on a created dashboard.</p>
+                                          </li>
+
+                                          <li>
+                                              <p><b>Be able to combine all of the above mentioned components into a smart device</b></p>
+                                              <div class="progress" style="height: 20px;">
+                                                  <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 75%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                              </div>
+                                              <p>All the components, both hardware and software, that we were able to create around our gas sensor
+                                                have enabled it to become a smart device that can be integrated into a complete IoT environment.
+                                                I've gone through all theses steps to make this smart device. </p>
+                                          </li>
+
+
+                  </ul>
+              </div>
+        </div>
+      </div>
+
+
+
+
+
+      </div>
+
+
+
   </div>
 
 </section>
