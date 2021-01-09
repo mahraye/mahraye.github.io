@@ -688,48 +688,6 @@
                 <p> You can find next my report:</p>
                 <a href="images/cloudReport.pdf" class="btn-Green small scrool">Download report</a>
 
-                <div class="col-md-12 text-center padding-top-10">
-                  <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsCloud" aria-expanded="false" aria-controls="collapseOne">
-                    <label class="btn btn-secondary active">
-                      <input type="checkbox" autocomplete="off"> Knowledge and skills mobilized
-                    </label>
-                  </button>
-
-                    <!--begin progress-list -->
-                  <div class=" d-flex justify-content-center" >
-                    <ul class="collapse progress-list" id="skillsCloud">
-
-                        <li>
-                            <p><b>Understand the concept of cloud computing</b></p>
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p>With several theoretical parts in the lab and in the courses on the concept of cloud computing, I am now able to understand the basics concept such as Virtual Machine and Containers.</p>
-                        </li>
-
-                        <li>
-                            <p><b>Use a IaaS-type cloud service </b></p>
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p> We used Infrastructure as a service (IaaS) in different lab lessons, I am now able to use cloud for my future projects.</p>
-                        </li>
-
-                        <li>
-                            <p><b>Deploy and adapt a cloud-based platform for IoT </b></p>
-                            <div class="progress" style="height: 20px;">
-                                <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                            </div>
-                            <p> We set up  different archetectures in the lab lessons. Thus, we deployed VMs in diffrent platforms such as Virtual Box and OpenStack. In OpenStack we created VMs in order to deploy a Service Oriented Architecture. </p>
-                        </li>
-
-
-
-                    </ul>
-                </div>
-                    <!--end progress-list -->
-                </div>
-
             </div>
           </div>
       </div>
@@ -764,42 +722,7 @@
                     <div class="d-flex justify-content-center">
 
                       <ul class="progress-list collapse" id="skillsSOA">
-                                              <li>
-                                                  <p><b>Situate the main standards for the IoT</b></p>
-                                                  <div class="progress" style="height: 20px;">
-                                                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                  <p> This lab is based on a Middleware MOOC wich I took. This MOOC helped me to understand main standards.</p>
-                                              </li>
 
-                                              <li>
-                                                  <p><b>Deploy an IoT standard architecture/sensor network</b></p>
-                                                  <div class="progress" style="height: 20px;">
-                                                      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                  <p> In the lab lessons and during the SOA project we deployed an OM2M archetecture in order. I am now able to understand how it works. </p>
-                                              </li>
-
-                                              <li>
-                                                  <p><b>Deploy and configure and IoT architecture using OM2M</b></p>
-                                                  <div class="progress" style="height: 20px;">
-                                                      <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                  <p> The second lab lesson and the Middleware MOOC was about interacting with the OM2M architecture. I understood how it works. </p>
-                                              </li>
-                                              <li>
-                                                  <p><b>Interact with the different REST services</b> </p>
-                                                  <div class="progress" style="height: 20px;">
-                                                      <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                  <p> In the lab, and in the project we implemented an application that allows to interact with OM2M platform and web service thanks to REST APIs. </p>
-                                              </li>
-                                                  <p><b>Integrate a new technology into the deployed architecture <b></p>
-                                                  <div class="progress" style="height: 20px;">
-                                                      <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                                                  </div>
-                                                  <p> During the last practical work, we were able to make the two standards MQTT and oneM2M interact with node-red. We just simulated actuators and sensor in the OM2M platform.
-                                              </li>
 
 
 
@@ -938,7 +861,7 @@
                   <div class="col-md-12 text-center padding-top-10">
                           <figure class="figure">
                               <img src="images/RessourceService.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 450px">
+                                alt="happy" style="width: 550px">
 
                           </figure>
                   </div>
@@ -946,7 +869,7 @@
                   <div class="col-md-12 text-center padding-top-10">
                           <figure class="figure">
                               <img src="images/RessourceServiceResult.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 450px">
+                                alt="happy" style="width: 550px">
 
                           </figure>
                   </div>
@@ -957,76 +880,222 @@
               <div class="row">
                   <h5>Unit Tests</h5>
               </div>
+              <p> Once all our web services and the OM2M platform were
+                 completely created and ready, we made a JUnit test in order to check if all
+               our sensor, actuator, and services worked well in different predicted test. Rather than test every service
+             separetly one by one which cost a lot of time. Consequently, this JUnit test was ver usefull to fastly
+           detect bugs. The following figure shows the test that succeded once all the bugs fixed:  </p>
 
+           <div class="col-md-12 text-center padding-top-10">
+                   <figure class="figure">
+                       <img src="images/JUnit.png" class="image-shadow figure-img img-fluid z-depth-1"
+                         alt="happy" style="width: 450px">
 
-              <div class="col-md-12 text-center padding-top-10">
-                <div class="col-md-12 text-center padding-top-10">
-                        <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsWeb" aria-expanded="false" aria-controls="collapseOne">
-                          <label class="btn btn-secondary active">
-                            <input type="checkbox" autocomplete="off"> Knowledge and skills mobilized
-                          </label>
-                        </button>
-                </div>
+                   </figure>
+           </div>
 
-                  <!--begin progress-list -->
-                <div class="d-flex justify-content-center">
-                  <ul class="progress-list collapse" id="skillsWeb">
-
-                      <li>
-                          <p><b>Know how to define a Service Oriented Architecture</b></p>
-                          <div class="progress" style="height: 20px;">
-                              <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <p>I learnt during the autonomous theoretical lessons what is a Service Oriented Architecture. I applied this lessons in the project. I understood the main use advantages. </p>
-                      </li>
-
-                      <li>
-                          <p><b>Deploy an SOA with web services</b></p>
-                          <div class="progress" style="height: 20px;">
-                              <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <p> In the project and the labs we deployed several type of web services. I liked the use of springboot to facilitate the creation of these services.</p>
-                      </li>
-
-                      <li>
-                          <p><b>Deploy and configure an SOA using SOAP</b></p>
-                          <div class="progress" style="height: 20px;">
-                              <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <p>In the work lessons we used SOAP to configure and create some SOAs. I understood how it works but I could be able to reuse it if needed. </p>
-                      </li>
-                      <li>
-                          <p><b>Deploy and configure an SOA using REST</b></p>
-                          <div class="progress" style="height: 20px;">
-                              <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <p> In the project, we deployed web services using REST APIs (interacting with OM2M, and launching the services). </p>
-                      </li>
-                          <p><b>Integrate a process manager in an SOA</b></p>
-                          <div class="progress" style="height: 20px;">
-                              <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-                          </div>
-                          <p> In the work lessons, we used BPEL integrating a process manager in a SOA. I understood how it works but I could be able to reuse it if needed. </p>
-                      </li>
-
-
-
-
-                  </ul>
-              </div>
-                  <!--end progress-list -->
-              </div>
 
             </div>
           </div>
       </div>
 
 
-      <!-- -------------------------------- Mobilized sikills------------------------------------- -->
+      <!-- -------------------------------- Mobilized skills------------------------------------- -->
+
+
+     <div class="row">
+       <div class="col-md-12 text-center padding-top-10">
+       <hr/>
+         <i class="fas fa-tasks fa-3x"></i>
+         <h3> Developped skills and knowledge </h3>
+
+
+       </div>
+
+               <div class="col-md-4 text-center padding-top-10">
+               <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsCAC" aria-expanded="false" aria-controls="collapseOne">
+
+                 <label class="btn btn-secondary active">
+                   <span>Show Cloud and Autonomic Computing</span>
+                 </label>
+               </button>
+
+               </div>
+
+
+               <div class="col-md-4 text-center padding-top-10">
+               <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsMiddleIoT" aria-expanded="false" aria-controls="collapseOne">
+
+                 <label class="btn btn-secondary active">
+                   <span>Show Middleware for IoT</span>
+                 </label>
+               </button>
+
+               </div>
+
+
+               <div class="col-md-4 text-center padding-top-10">
+               <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#skillsSOA" aria-expanded="false" aria-controls="collapseOne">
+
+                 <label class="btn btn-secondary active">
+                   <span>Show Service Oriented Architecture</span>
+                 </label>
+               </button>
+
+             </div>
+
+
+
+             <div class="col-md-8 mx-auto text-center padding-top-10">
+               <ul class="progress-list collapse" id="skillsSOA">
+
+                 <hr/>
+                 <h5> Service Oriented Archetecture Skills</h5>
+                   <li>
+                       <p></p>
+                       <div class="progress" style="height: 20px;">
+                           <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Know how to define a Service Oriented Architecture</b></div>
+                       </div>
+                       <p>I learnt during the autonomous theoretical lessons what is a Service Oriented Architecture. I applied this lessons in the project. I understood the main use advantages. </p>
+                   </li>
+
+                   <li>
+                       <p></p>
+                       <div class="progress" style="height: 20px;">
+                           <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Deploy an SOA with web services</b></div>
+                       </div>
+                       <p> In the project and the labs we deployed several type of web services. I liked the use of springboot to facilitate the creation of these services.</p>
+                   </li>
+
+                   <li>
+                       <p></p>
+                       <div class="progress" style="height: 20px;">
+                           <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Deploy and configure an SOA using SOAP</b></div>
+                       </div>
+                       <p>In the work lessons we used SOAP to configure and create some SOAs. I understood how it works but I could be able to reuse it if needed. </p>
+                   </li>
+                   <li>
+                       <p></p>
+                       <div class="progress" style="height: 20px;">
+                           <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Deploy and configure an SOA using REST</b></div>
+                       </div>
+                       <p> In the project, we deployed web services using REST APIs (interacting with OM2M, and launching the services). </p>
+                   </li>
+                       <p></p>
+                       <div class="progress" style="height: 20px;">
+                           <div class="progress-bar" role="progressbar" style="width: 20%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Integrate a process manager in an SOA</b></div>
+                       </div>
+                       <p> In the work lessons, we used BPEL integrating a process manager in a SOA. I understood how it works but I could be able to reuse it if needed. </p>
+                   </li>
+
+
+                  </ul>
+
+             </div>
 
 
 
 
+             <div class="col-md-8 mx-auto text-center padding-top-10">
+               <ul class="progress-list collapse" id="skillsMiddleIoT">
+                 <hr/>
+                 <h5> Middleware Skills</h5>
+                 <li>
+                     <p><b>Situate the main standards for the IoT</b></p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p> This lab is based on a Middleware MOOC wich I took. This MOOC helped me to understand main standards.</p>
+                 </li>
+
+                 <li>
+                     <p><b>Deploy an IoT standard architecture/sensor network</b></p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p> In the lab lessons and during the SOA project we deployed an OM2M archetecture in order. I am now able to understand how it works. </p>
+                 </li>
+
+                 <li>
+                     <p><b>Deploy and configure and IoT architecture using OM2M</b></p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p> The second lab lesson and the Middleware MOOC was about interacting with the OM2M architecture. I understood how it works. </p>
+                 </li>
+                 <li>
+                     <p><b>Interact with the different REST services</b> </p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p> In the lab, and in the project we implemented an application that allows to interact with OM2M platform and web service thanks to REST APIs. </p>
+                 </li>
+                     <p><b>Integrate a new technology into the deployed architecture <b></p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p> During the last practical work, we were able to make the two standards MQTT and oneM2M interact with node-red. We just simulated actuators and sensor in the OM2M platform.
+                 </li>
+
+
+                  </ul>
+
+             </div>
+
+             <div class="col-md-8 mx-auto text-center padding-top-10">
+               <ul class="progress-list collapse" id="skillsCAC">
+                 <hr/>
+                 <h5> Cloud Computing Skills</h5>
+                 <li>
+                     <p><b>Understand the concept of cloud computing</b></p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p>With several theoretical parts in the lab and in the courses on the concept of cloud computing, I am now able to understand the basics concept such as Virtual Machine and Containers.</p>
+                 </li>
+
+                 <li>
+                     <p><b>Use a IaaS-type cloud service </b></p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p> We used Infrastructure as a service (IaaS) in different lab lessons, I am now able to use cloud for my future projects.</p>
+                 </li>
+
+                 <li>
+                     <p><b>Deploy and adapt a cloud-based platform for IoT </b></p>
+                     <div class="progress" style="height: 20px;">
+                         <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                     </div>
+                     <p> We set up  different archetectures in the lab lessons. Thus, we deployed VMs in diffrent platforms such as Virtual Box and OpenStack. In OpenStack we created VMs in order to deploy a Service Oriented Architecture. </p>
+                 </li>
+
+
+                  </ul>
+
+             </div>
+
+      </div>
+    </div>
+          <!--end progress-list -->
+
+
+          <!-- Conclusion ------------------------- -->
+          <div class="col-md-12 mx-auto text-center padding-top-10">
+            <div class="col-md-12 text-center padding-top-10">
+
+              <i class="fas fa-star fa-3x"></i>
+              <h3> Conclusion </h3>
+
+            </div>
+            <p> Theses courses, labs, and projects of Middleware and services enabled me to get a
+              background in the IT part of the IoT. In fact, we went deeper in some concepts that I went through theorically in
+            the previous years at INSA (virtualisation, networks). Moreover, this courses enabled me to get background on DeVops concepts/tools (Jenkins, Springboot, API rest )
+
+           and project organization (Jira Scrum methods) which will be very usefull the in a compagny context.
+           It was very interesting to apply this devOps tool in an IoT context and discover how we can link all the different protocols
+         , types of connected objects and interfacing tools.</p>
+          </div>
 
 
 

@@ -1631,6 +1631,10 @@ ul.benefits.white li i {
     background-color: #e52a3d;
 }
 
+hr {
+  border-top: 2px dashed black;
+	width: 50%
+}
 
 /* h) FAQ */
 .faq-box{
@@ -1646,6 +1650,7 @@ ul.benefits.white li i {
 .faq-box h5{
 	margin-bottom: 7px;
 }
+
 
 /* ========================================================== */
 /* 			             09. MEDIA QUERIES                    */
@@ -1879,4 +1884,11 @@ ul.benefits.white li i {
 
 .hovereffect a.info:hover {
   box-shadow: 0 0 5px #fff;
+}
+
+.fa-tasks {
+	color: grey;
+}
+.fa-star {
+	color: grey;
 }
