@@ -1623,6 +1623,9 @@ ul.benefits.white li i {
 
 .progress{
 	margin-bottom: 15px;
+	background-color: #aaa;
+ -webkit-box-shadow: none;
+ box-shadow: none;
 }
 
 .progress-bar {
