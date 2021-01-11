@@ -1635,9 +1635,13 @@ ul.benefits.white li i {
 }
 
 hr {
-  border-top: 2px dashed black;
-	width: 50%
+  height: 3px;
+	width: 50%;
+  margin-bottom:12px;
+	margin-up:6px;
+	background-image: -webkit-linear-gradient(left, rgba(244,67,54,.8), rgba(244,67,54,.6), rgba(0,0,0,0));
 }
+
 
 /* h) FAQ */
 .faq-box{

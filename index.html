@@ -569,7 +569,7 @@
               <div class="col-md-12 col-sm-6 col-xs-12 text-center padding-bottom-30">
                 <a href="#DataEngineering" class="btn-red small scrool"> <img src="images/data.png" alt="testimonials" class="testim-img">Data Engineering</a>
                   <a href="#SmartDevices" class="btn-red small scrool"> <img src="images/smartd.png" alt="testimonials" class="testim-img">Smart Devices</a>
-                    <a href="#gallery" class="btn-red small scrool"> <img src="images/comm.png" alt="testimonials" class="testim-img">Communication</a>
+                    <a href="#ProtocolCommunication" class="btn-red small scrool"> <img src="images/comm.png" alt="testimonials" class="testim-img">Communication</a>
 
 
 
@@ -614,8 +614,10 @@
     <!-- Middleware and services word -->
 
     <section class="section-grey" id="MaS">
-      <!-- -----------container Cloud ---------->
+
+
       <div class="container">
+
           <!--begin row-->
           <div class="row">
             <div class="col-md-12 text-center padding-bottom-10">
@@ -665,7 +667,200 @@
 
             </div>
           </div>
+          <!-- -------Project SOA -------------- -->
+          <div class="container">
+              <!--begin row-->
 
+              <div class="row collapse" id="SOAproject">
+                <div>
+
+                  <div class="col-md-12 text-center padding-top-10">
+                      <h4 class="section-title"> Service Oriented Architecture: Room management</h4>
+
+                  </div>
+                    <div class="row">
+                      <p> We realized in a group of 3 students a project of Room’s Management to apply Service Oriented Architecture’s and Middleware lessons. The goal was to realize a Web application to manage a room, like opening the door, switching on/off the light depending on the state of a samples of sensors. We had to implement diffrent scenarios based on the state of the sensor. As example of scenario: "close the windows when the temperature is under 18°C"</p>
+
+                    </div>
+                    <div class="row">
+                      <h5>Jira: How we organized our project</h5>
+                    </div>
+                    <div>
+
+                      <p>To do that, we worked in agile using the tool Jira. It is  a project management tool allowing us to work in agile. Consequently,
+                         we organized the project in 3 sprints composed of userstories correponding to the different scenarios. </p>
+                      <p> The next figures show these sprints: </p>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/sprint1.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 800px">
+                                  <figcaption class="figure-caption">The first sprint done.</figcaption>
+                              </figure>
+                      </div>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/sprint2.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 800px">
+                                  <figcaption class="figure-caption">The second sprint done.</figcaption>
+                              </figure>
+                      </div>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/sprint3.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 800px">
+                                  <figcaption class="figure-caption">The third sprint done.</figcaption>
+                              </figure>
+                      </div>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/sprint4.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 800px">
+                                  <figcaption class="figure-caption">The fourth sprint done.</figcaption>
+                              </figure>
+                      </div>
+                    </div>
+
+                  <div class="row">
+                      <h5>OM2M Platform</h5>
+                  </div>
+                  <div>
+                        <p>In order to monitor the sensors we set up an OM2M Platform which have all the ressources needed.
+                           This platform has the following tree archetecture of ressources: </p>
+
+                           <div class="col-md-12 text-center padding-top-10">
+                                   <figure class="figure">
+                                       <img src="images/om2m.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                         alt="happy" style="width: 450px">
+                                       <figcaption class="figure-caption">OM2M ressource tree.</figcaption>
+                                   </figure>
+                           </div>
+                           <p>We organized the elements by platforms AE (application entity). In each platform there are the sensors and actuators containers. Each sensor/actuator contains its data CIN.  </p>
+                            <p>This platforms were created by a java program by using POST requests, it was easier than using a rest client (i.e Postman). In fact, if the OM2M platform is destroyed, it is easier to rebuild it just by launching this program.
+                              It is really faster than resend all request in a REST client.</p>
+                  </div>
+
+
+
+                  <div class="row">
+                      <h5>Web Services</h5>
+
+                  </div>
+                    <p>In order to monitor this IoT platform we implemented web services. In fact, we created 3 types of services: </p>
+                  <ul class="benefits">
+                    <li><i class="fas fa-check"></i> Services to get a CIN's content of an actuator or a sensor </li>
+                      <div class="row">
+                      <p> These services are simple: we just return the wanted content thanks to a get request. For instance to get the value of the temperature sensor:  </p>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/serviceTemp.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 450px">
+
+                              </figure>
+                      </div>
+                      <p> When the sensor uses this service, he will get the sensor's value: </p>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/TempServiceResult.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 450px">
+
+                              </figure>
+                      </div>
+                    </div>
+                    <li><i class="fas fa-check"></i> Services to set a CIN content of an actuator or a sensor </li>
+                    <div class="row">
+                    <p> It is in these service where the analysis/monitoring of sensors and actuators are done in order
+                      to implement the diffrent scenarios</p>
+                      <p> For instance to simulate the scenario "As a client, I want that the windows opened when outside temperature is lower(between 18 and 27°) than the indoor
+                        temperature so that it allows energy economy", when the temperature is set up to be simulated, there is a monitoring that is done:  </p>
+                        <div class="col-md-12 text-center padding-top-10">
+                                <figure class="figure">
+                                    <img src="images/TempServiceSet.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                      alt="happy" style="width: 450px">
+
+                                </figure>
+                        </div>
+                        <p> As we can see the window is monitored depending on the temperature set.</p>
+
+                        <p>All others web services are detailled in the source code in the gitHub repository:  </p>
+                    </div>
+                    <div class="row">
+                      <span class="freelancer-main-details"> GitHub</span><a href="https://github.com/KilianDesportes/softwareengineering_soa_iot" target="_blank"><span class="freelancer-second-details">SOArepository</span></a>
+                    </div>
+                    <li> <i class="fas fa-check"></i>A general service that summarize the state of our actuators and sensors </li>
+                    <div class="row">
+                      <p> The purpose of this service is just to return the main informations avaiable from the OM2M platform.</p>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/RessourceService.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 550px">
+
+                              </figure>
+                      </div>
+                      <p> Then when the user uses this service he will get the following output:</p>
+                      <div class="col-md-12 text-center padding-top-10">
+                              <figure class="figure">
+                                  <img src="images/RessourceServiceResult.png" class="image-shadow figure-img img-fluid z-depth-1"
+                                    alt="happy" style="width: 550px">
+
+                              </figure>
+                      </div>
+                    </div>
+                  </ul>
+
+
+                  <div class="row">
+                      <h5>Unit Tests</h5>
+                  </div>
+                  <p> Once all our web services and the OM2M platform were
+                     completely created and ready, we made a JUnit test in order to check if all
+                   our sensor, actuator, and services worked well in different predicted test. Rather than test every service
+                 separetly one by one which cost a lot of time. Consequently, this JUnit test was ver usefull to fastly
+               detect bugs. The following figure shows the test that succeded once all the bugs fixed:  </p>
+
+               <div class="col-md-12 text-center padding-top-10">
+                       <figure class="figure">
+                           <img src="images/JUnit.png" class="image-shadow figure-img img-fluid z-depth-1"
+                             alt="happy" style="width: 450px">
+
+                       </figure>
+               </div>
+
+
+                </div>
+                  <hr/>
+              </div>
+
+          </div>
+
+          <!-- -------Middleware Lab -------------- -->
+          <div class="container">
+
+              <div class="row collapse" id="MiddlewareLab">
+                <div>
+                <div class="col-md-12 text-center padding-top-10">
+                    <h4 class="section-title"> Middleware for IoT Lab</h4>
+
+                </div>
+                <div class="row">
+                  <p>During this lab we discovered three mainly used tools in IoT. Firstly, we used MQTT protocol to compute a LED. To do that, we set up a moquitto broker and publishing subscribing topic with an arduino.</p>
+                  <p>Then, we discovered the restfull OM2M standard. It's a platform that enables us to set up a ressource archetecture that contains sensors but also their data/states. Thus, we can interact with this ressources via the API Rest queries. </p>
+                  <p> Finally, linked these two tools thanks to Node-Red. Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.</p>
+
+                  <p> You can find next my full report:</p>
+
+
+
+                </div>
+
+                <a href="images/intergicielReport.pdf" class="btn-Green small scrool">Download report</a>
+              </div>
+                  <hr/>
+
+              </div>
+
+          </div>
+
+            <!-- -------Cloud -------------- -->
           <div class="row collapse" id="Cloud">
             <div>
 
@@ -687,197 +882,14 @@
                 </ul>
                 <p> You can find next my report:</p>
                 <a href="images/cloudReport.pdf" class="btn-Green small scrool">Download report</a>
-
+                <hr/>
             </div>
           </div>
       </div>
 
-      <!-- -------Middleware Lab -------------- -->
-      <div class="container">
-
-          <div class="row collapse" id="MiddlewareLab">
-            <div class="col-md-12 text-center padding-top-10">
-                <h4 class="section-title"> Middleware for IoT Lab</h4>
-
-            </div>
-            <div class="row">
-              <p>During this lab we discovered three mainly used tools in IoT. Firstly, we used MQTT protocol to compute a LED. To do that, we set up a moquitto broker and publishing subscribing topic with an arduino.</p>
-              <p>Then, we discovered the restfull OM2M standard. It's a platform that enables us to set up a ressource archetecture that contains sensors but also their data/states. Thus, we can interact with this ressources via the API Rest queries. </p>
-              <p> Finally, linked these two tools thanks to Node-Red. Node-RED is a programming tool for wiring together hardware devices, APIs and online services in new and interesting ways.</p>
-
-              <p> You can find next my full report:</p>
 
 
 
-            </div>
-
-            <a href="images/intergicielReport.pdf" class="btn-Green small scrool">Download report</a>
-
-          </div>
-      </div>
-
-      <!-- -------Project SOA -------------- -->
-      <div class="container">
-          <!--begin row-->
-
-          <div class="row collapse" id="SOAproject">
-            <div>
-
-              <div class="col-md-12 text-center padding-top-10">
-                  <h4 class="section-title"> Service Oriented Architecture: Room management</h4>
-
-              </div>
-                <div class="row">
-                  <p> We realized in a group of 3 students a project of Room’s Management to apply Service Oriented Architecture’s and Middleware lessons. The goal was to realize a Web application to manage a room, like opening the door, switching on/off the light depending on the state of a samples of sensors. We had to implement diffrent scenarios based on the state of the sensor. As example of scenario: "close the windows when the temperature is under 18°C"</p>
-
-                </div>
-                <div class="row">
-                  <h5>Jira: How we organized our project</h5>
-                </div>
-                <div>
-
-                  <p>To do that, we worked in agile using the tool Jira. It is  a project management tool allowing us to work in agile. Consequently,
-                     we organized the project in 3 sprints composed of userstories correponding to the different scenarios. </p>
-                  <p> The next figures show these sprints: </p>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/sprint1.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 800px">
-                              <figcaption class="figure-caption">The first sprint done.</figcaption>
-                          </figure>
-                  </div>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/sprint2.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 800px">
-                              <figcaption class="figure-caption">The second sprint done.</figcaption>
-                          </figure>
-                  </div>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/sprint3.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 800px">
-                              <figcaption class="figure-caption">The third sprint done.</figcaption>
-                          </figure>
-                  </div>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/sprint4.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 800px">
-                              <figcaption class="figure-caption">The fourth sprint done.</figcaption>
-                          </figure>
-                  </div>
-                </div>
-
-              <div class="row">
-                  <h5>OM2M Platform</h5>
-              </div>
-              <div>
-                    <p>In order to monitor the sensors we set up an OM2M Platform which have all the ressources needed.
-                       This platform has the following tree archetecture of ressources: </p>
-
-                       <div class="col-md-12 text-center padding-top-10">
-                               <figure class="figure">
-                                   <img src="images/om2m.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                     alt="happy" style="width: 450px">
-                                   <figcaption class="figure-caption">OM2M ressource tree.</figcaption>
-                               </figure>
-                       </div>
-                       <p>We organized the elements by platforms AE (application entity). In each platform there are the sensors and actuators containers. Each sensor/actuator contains its data CIN.  </p>
-                        <p>This platforms were created by a java program by using POST requests, it was easier than using a rest client (i.e Postman). In fact, if the OM2M platform is destroyed, it is easier to rebuild it just by launching this program.
-                          It is really faster than resend all request in a REST client.</p>
-              </div>
-
-
-
-              <div class="row">
-                  <h5>Web Services</h5>
-
-              </div>
-                <p>In order to monitor this IoT platform we implemented web services. In fact, we created 3 types of services: </p>
-              <ul class="benefits">
-                <li><i class="fas fa-check"></i> Services to get a CIN's content of an actuator or a sensor </li>
-                  <div class="row">
-                  <p> These services are simple: we just return the wanted content thanks to a get request. For instance to get the value of the temperature sensor:  </p>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/serviceTemp.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 450px">
-
-                          </figure>
-                  </div>
-                  <p> When the sensor uses this service, he will get the sensor's value: </p>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/TempServiceResult.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 450px">
-
-                          </figure>
-                  </div>
-                </div>
-                <li><i class="fas fa-check"></i> Services to set a CIN content of an actuator or a sensor </li>
-                <div class="row">
-                <p> It is in these service where the analysis/monitoring of sensors and actuators are done in order
-                  to implement the diffrent scenarios</p>
-                  <p> For instance to simulate the scenario "As a client, I want that the windows opened when outside temperature is lower(between 18 and 27°) than the indoor
-                    temperature so that it allows energy economy", when the temperature is set up to be simulated, there is a monitoring that is done:  </p>
-                    <div class="col-md-12 text-center padding-top-10">
-                            <figure class="figure">
-                                <img src="images/TempServiceSet.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                  alt="happy" style="width: 450px">
-
-                            </figure>
-                    </div>
-                    <p> As we can see the window is monitored depending on the temperature set.</p>
-
-                    <p>All others web services are detailled in the source code in the gitHub repository:  </p>
-                </div>
-                <div class="row">
-                  <span class="freelancer-main-details"> GitHub</span><a href="https://github.com/KilianDesportes/softwareengineering_soa_iot" target="_blank"><span class="freelancer-second-details">SOArepository</span></a>
-                </div>
-                <li> <i class="fas fa-check"></i>A general service that summarize the state of our actuators and sensors </li>
-                <div class="row">
-                  <p> The purpose of this service is just to return the main informations avaiable from the OM2M platform.</p>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/RessourceService.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 550px">
-
-                          </figure>
-                  </div>
-                  <p> Then when the user uses this service he will get the following output:</p>
-                  <div class="col-md-12 text-center padding-top-10">
-                          <figure class="figure">
-                              <img src="images/RessourceServiceResult.png" class="image-shadow figure-img img-fluid z-depth-1"
-                                alt="happy" style="width: 550px">
-
-                          </figure>
-                  </div>
-                </div>
-              </ul>
-
-
-              <div class="row">
-                  <h5>Unit Tests</h5>
-              </div>
-              <p> Once all our web services and the OM2M platform were
-                 completely created and ready, we made a JUnit test in order to check if all
-               our sensor, actuator, and services worked well in different predicted test. Rather than test every service
-             separetly one by one which cost a lot of time. Consequently, this JUnit test was ver usefull to fastly
-           detect bugs. The following figure shows the test that succeded once all the bugs fixed:  </p>
-
-           <div class="col-md-12 text-center padding-top-10">
-                   <figure class="figure">
-                       <img src="images/JUnit.png" class="image-shadow figure-img img-fluid z-depth-1"
-                         alt="happy" style="width: 450px">
-
-                   </figure>
-           </div>
-
-
-            </div>
-          </div>
-      </div>
 
 
       <!-- -------------------------------- Mobilized skills------------------------------------- -->
@@ -885,7 +897,7 @@
 
      <div class="row">
        <div class="col-md-12 text-center padding-top-10">
-       <hr/>
+
          <i class="fas fa-tasks fa-3x"></i>
          <h3> Developped skills and knowledge </h3>
 
@@ -929,7 +941,6 @@
              <div class="col-md-8 mx-auto text-center padding-top-10">
                <ul class="progress-list collapse" id="skillsSOA">
 
-                 <hr/>
                  <h5> Service Oriented Archetecture Skills</h5>
                    <li>
                        <p></p>
@@ -1075,7 +1086,7 @@
            It was very interesting to apply this devOps tool in an IoT context and discover how we can link all the different protocols
          , types of connected objects and interfacing tools.</p>
           </div>
-
+          <hr/>
 
 
 
@@ -1133,8 +1144,33 @@
 
 
       <div class="container">
+        <!--------- TRIZ------------------------>
+        <div class="row collapse" id="triz">
+          <div>
+          <div class="col-md-12 text-center padding-top-10">
+              <h4 class="section-title"> Theory of Inventive Problem Solving</h4>
+
+          </div>
+          <div class="row">
+            <p>During this Theory of Iventive Problem Solving courses we discovered how to solve an inventive problem in a project. In pairs we had to solve this problem on a specific object. </p>
+            <p>Our chosen object was italian coffee maker. We used all the tools of the course to study this object in order to innovate it. </p>
+
+            <p> You can find next my study report of this object.</p>
+
+
+
+          </div>
+          <a href="images/TRIZ.pdf" class="btn-Green small scrool">Download Study</a>
+        </div>
+
+          <hr/>
+
+        </div>
+
+
           <!-- ------- Psycho -------------- -->
           <div class="row collapse" id="psycho">
+            <div>
             <div class="col-md-12 text-center padding-top-10">
                 <h4 class="section-title"> Psychology</h4>
 
@@ -1150,7 +1186,9 @@
             </div>
 
             <a href="images/Psycho.pdf" class="btn-Green small scrool">Download presentation</a>
+          </div>
 
+          <hr/>
 
 
 
@@ -1158,26 +1196,7 @@
           </div>
 
 
-          <!--------- TRIZ------------------------>
-          <div class="row collapse" id="triz">
-            <div class="col-md-12 text-center padding-top-10">
-                <h4 class="section-title"> Theory of Inventive Problem Solving</h4>
 
-            </div>
-            <div class="row">
-              <p>During this Theory of Iventive Problem Solving courses we discovered how to solve an inventive problem in a project. In pairs we had to solve this problem on a specific object. </p>
-              <p>Our chosen object was italian coffee maker. We used all the tools of the course to study this object in order to innovate it. </p>
-
-              <p> You can find next my study report of this object.</p>
-
-
-
-            </div>
-
-            <a href="images/TRIZ.pdf" class="btn-Green small scrool">Download Study</a>
-
-
-          </div>
       </div>
 
 
@@ -1196,7 +1215,7 @@
 
      <div class="row">
        <div class="col-md-12 text-center padding-top-10">
-       <hr/>
+
          <i class="fas fa-tasks fa-3x"></i>
          <h3> Developped skills and knowledge </h3>
 
@@ -1411,7 +1430,7 @@
             to deal with a lot of kind situation during a project. That will be very usefull in a company context when I will work with
           other people in a team. </p>
           </div>
-
+           <hr/>
 
     </section>
 
@@ -1470,13 +1489,43 @@
 
 
       <div class="container">
+
+
+        <!--------- big data------------------------>
+        <div class="row collapse" id="bigdata">
+          <div class="col-md-12 text-center padding-top-10">
+              <h4 class="section-title"> Big Data processing</h4>
+
+          <div>
+
+          <div class="row">
+            <p>During this Theory of Iventive Problem Solving courses we discovered how to solve an inventive problem in a project. In pairs we had to solve this problem on a specific object. </p>
+            <p>Our chosen object was italian coffee maker. We used all the tools of the course to study this object in order to innovate it. </p>
+
+            <p> You can find next my study report of this object.</p>
+
+
+
+          </div>
+
+          <a href="images/bigDataReport.pdf" class="btn-Green small scrool">Download full report</a>
+          </div>
+          <hr/>
+        </div>
+
+
+
+        </div>
           <!-- ------- semantic data  -------------- -->
+
           <div class="row collapse" id="semantic">
             <div class="col-md-12 text-center padding-top-10">
                 <h4 class="section-title"> Semantic Data</h4>
 
             </div>
+            <div>
             <div class="row">
+
               <p>The purpose of this lab is to apply the concepts of semantic data seen in the theoretical courses. The main goals were :</p>
 
 
@@ -1494,8 +1543,8 @@
 
                   <a href="images/semantic.pdf" class="btn-Green small scrool">Download full report</a>
             </div>
-
-
+          </div>
+          <hr/>
 
 
 
@@ -1504,28 +1553,7 @@
           </div>
 
 
-          <!--------- big data------------------------>
-          <div class="row collapse" id="bigdata">
-            <div class="col-md-12 text-center padding-top-10">
-                <h4 class="section-title"> Big Data processing</h4>
 
-            </div>
-            <div class="row">
-              <p>During this Theory of Iventive Problem Solving courses we discovered how to solve an inventive problem in a project. In pairs we had to solve this problem on a specific object. </p>
-              <p>Our chosen object was italian coffee maker. We used all the tools of the course to study this object in order to innovate it. </p>
-
-              <p> You can find next my study report of this object.</p>
-
-
-
-            </div>
-
-            <a href="images/bigDataReport.pdf" class="btn-Green small scrool">Download full report</a>
-
-
-
-
-          </div>
       </div>
 
 
@@ -1534,7 +1562,6 @@
 
      <div class="row">
        <div class="col-md-12 text-center padding-top-10">
-       <hr/>
          <i class="fas fa-tasks fa-3x"></i>
          <h3> Developped skills and knowledge </h3>
 
@@ -1796,6 +1823,172 @@
 
 
 
+    <!--------- M&OSH------------------------>
+    <div class="row collapse" id="MOSH">
+      <div class="col-md-12 text-center padding-top-10">
+          <h3 class="section-title"> Microcontrollers & Open Source Hardware</h3>
+
+      </div>
+      <div class="row">
+        <p>After we manufactured the sensor, did the integration in an electronic circuit, the purpose
+           of this Microcontrollers & Open Source Hardware is to realise a connected gas sensor.
+           The system had to be able to send data over the web with Lora technology and had to be plug with a
+           special shield on an Arduino. The main part of this project were:</p>
+           <ul class="benefits">
+             <li><i class="fas fa-check"></i> Firstly, Create a custom Arduino Shield for the whole system </li>
+             <li><i class="fas fa-check"></i> Secondly, Send data to internet through a Lora radio </li>
+             <li> <i class="fas fa-check"></i>Finaly, Exploit received data with Node-Red</li>
+           </ul>
+      </div>
+      <div class="row">
+        <h4>Create a shield with Kicad</h4>
+      </div>
+      <div>
+        <p>In order to create a custom Arduino Shield that allows to accommodate all the elements, we used the
+          software Kicad. We integrated the electronic circuit and the chip that
+          enables us to communicate by LoRa (RN2483 chip).</p>
+          <div class="row">
+            <h5>Built Schematics:</h5>
+          </div>
+        <p>The first step in Kicad was to create all the schmatics needed. The next figure show our shematic :</p>
+          <div class="col-md-12 text-center padding-top-10">
+                  <figure class="figure">
+                      <img src="images/kicad1.png" class="image-shadow figure-img img-fluid z-depth-1"
+                        alt="happy" style="width: 800px">
+                      <figcaption class="figure-caption">shield's schmatic</figcaption>
+                  </figure>
+          </div>
+          <p>The shematic is composed of four parts: Amplifier stage (see the Analog Electronic Labs), LoRa chip (RN2483), Arduino chip, and the gas sensor connection.</p>
+          <div class="row">
+            <h5>Final PCB:</h5>
+          </div>
+
+        <p>Once the schematics done and connected all the pins of each element the final PCB can be built as follows: </p>
+        <div class="col-md-12 text-center padding-top-10">
+                <figure class="figure">
+                    <img src="images/kicad2.png" class="image-shadow figure-img img-fluid z-depth-1"
+                      alt="happy" style="width: 600px">
+                    <figcaption class="figure-caption">Kicad PCB 2D view </figcaption>
+                </figure>
+        </div>
+
+        <div class="col-md-12 text-center padding-top-10">
+                <figure class="figure">
+                    <img src="images/kicad3.png" class="image-shadow figure-img img-fluid z-depth-1"
+                      alt="happy" style="width: 600px">
+                    <figcaption class="figure-caption">Kicad PCB 3D view </figcaption>
+                </figure>
+        </div>
+        <div class="row">
+          <h4>Read the sensor data and send them through a LoRa radio</h4>
+        </div>
+        <p>Once our sensor manufactured and we got the its PCB for Arduino, we can now monitor its data.
+          In fact, we used an Arduino with a LoRa radio module (the RN2483) the build this connected gas sensor.
+        Then, we communicated with the a gateway situated at the roof of the GEI building.
+      To do that, we used The Things Network (TTN) library and implementd an Arduino code (C++) to send the GEI's gateway.
+    Consequently, we were abe to send the sensor data values and monitor them from the TNN server of the gateway. The next figure
+  shows some data monitored on the TTN server: </p>
+
+      <div class="col-md-12 text-center padding-top-10">
+              <figure class="figure">
+                  <img src="images/ttn.png" class="image-shadow figure-img img-fluid z-depth-1"
+                    alt="happy" style="width: 600px">
+                  <figcaption class="figure-caption">Gas sensor monitoring on TTN</figcaption>
+              </figure>
+      </div>
+      <div class="row">
+        <h4>Monitor the sensor data with Node-Red</h4>
+      </div>
+      <p>In order to get an user friendly interface, we built an Human-Machine interface by using Node-Red.
+        We created a dashboard that allows us to monitor the gas sensor's measurements, and display them in a
+      intuitive way for the user (graph/figure that shows the evolutions).</p>
+      <p> The next figure shows the Node-Red flow created: </p>
+      <div class="col-md-12 text-center padding-top-10">
+              <figure class="figure">
+                  <img src="images/node-red.png" class="image-shadow figure-img img-fluid z-depth-1"
+                    alt="happy" style="width: 600px">
+                  <figcaption class="figure-caption">Node-Red flow</figcaption>
+              </figure>
+      </div>
+      <p> It is composed of the payload reception (ttn uplink: from the TTN node-red library),
+        a function allowing us to decode the payload received from TNN, and the two intuitive
+        displays in the dashboard.</p>
+      <p> The next figure shows the final dashboard: </p>
+      <div class="col-md-12 text-center padding-top-10">
+              <figure class="figure">
+                  <img src="images/node-red2.png" class="image-shadow figure-img img-fluid z-depth-1"
+                    alt="happy" style="width: 600px">
+                  <figcaption class="figure-caption">Node-Red DashBoard HMI</figcaption>
+              </figure>
+      </div>
+      <hr/>
+      </div>
+
+
+    </div>
+
+
+
+
+
+
+
+          <!--------- AEL------------------------>
+          <div class="row collapse" id="AnalogElec">
+            <div class="col-md-12 text-center padding-top-10">
+                <h4 class="section-title"> Analog Electronic Labs</h4>
+
+            </div>
+            <div class="row">
+              <p>After we manufactured the sensor, we had to integrate it in an electronic circuit. The aim of this circuit is to amplify the
+              out signal from the gas sensor in order to be used by an arduino. In fact, the arduino's ADC can not treat the
+            the out signal while this signal is not amplified: the entry impedance of the Arduino is much lower than the impedance of the sensor.</p>
+            <div class="row">
+              <h5>LTSpice: How we simulated the circuit</h5>
+            </div>
+              <p>We used the software LTSpice to simulate this analog circuit. It allows us to build schematics we want and then run some simulations.</p>
+
+              <p>The next figure shows the final circuit that we used. Firstly, we simulated the sensor by a low pass filter.
+                Then, we placed it at the entry of the amplifier that can amplify it and obtain the wanted signal. Finally, we had to filter
+                the noise, to do that, we used several filters.</p>
+                <div class="col-md-12 text-center padding-top-10">
+                        <figure class="figure">
+                            <img src="images/elec1.png" class="image-shadow figure-img img-fluid z-depth-1"
+                              alt="happy" style="width: 800px">
+                            <figcaption class="figure-caption">Analog cirtcuit</figcaption>
+                        </figure>
+                </div>
+
+                <div class="row">
+                  <h5>Kicad: Integration on the PCB</h5>
+                </div>
+
+              <p>  When we were sure that this circuit was the perfect one for our sensor we integrated it
+              in our final PCB on kicad. The following figure shows the Kicad shematics:</p>
+              <div class="col-md-12 text-center padding-top-10">
+                      <figure class="figure">
+                          <img src="images/elec2.png" class="image-shadow figure-img img-fluid z-depth-1"
+                            alt="happy" style="width: 800px">
+                          <figcaption class="figure-caption">Kicad schematics: analog circuit integration on PCB </figcaption>
+                      </figure>
+              </div>
+
+              <p>The following figure shows the 3D view of this circuit on the PCB: </p>
+              <div class="col-md-12 text-center padding-top-10">
+                      <figure class="figure">
+                          <img src="images/elec3.png" class="image-shadow figure-img img-fluid z-depth-1"
+                            alt="happy" style="width: 800px">
+                          <figcaption class="figure-caption">3D view: analog circuit integration on PCB </figcaption>
+                      </figure>
+              </div>
+              <hr/>
+            </div>
+
+
+
+
+          </div>
+
 
 
         <!-- ------- SMA -------------- -->
@@ -1899,69 +2092,7 @@
               <a href="images/datasheet.pdf" class="btn-Green small scrool">datasheet</a>
         </div>
 
-
-
-
-
-
-      </div>
-
-
-
-
-
-
-
-
-      <!--------- AEL------------------------>
-      <div class="row collapse" id="AnalogElec">
-        <div class="col-md-12 text-center padding-top-10">
-            <h4 class="section-title"> Analog Electronic Labs</h4>
-
-        </div>
-        <div class="row">
-          <p>After we manufactured the sensor, we had to integrate it in an electronic circuit. The aim of this circuit is to amplify the
-          out signal from the gas sensor in order to be used by an arduino. In fact, the arduino's ADC can not treat the
-        the out signal while this signal is not amplified: the entry impedance of the Arduino is much lower than the impedance of the sensor.</p>
-        <div class="row">
-          <h5>LTSpice: How we simulated the circuit</h5>
-        </div>
-          <p>We used the software LTSpice to simulate this analog circuit. It allows us to build schematics we want and then run some simulations.</p>
-
-          <p>The next figure shows the final circuit that we used. Firstly, we simulated the sensor by a low pass filter.
-            Then, we placed it at the entry of the amplifier that can amplify it and obtain the wanted signal. Finally, we had to filter
-            the noise, to do that, we used several filters.</p>
-            <div class="col-md-12 text-center padding-top-10">
-                    <figure class="figure">
-                        <img src="images/elec1.png" class="image-shadow figure-img img-fluid z-depth-1"
-                          alt="happy" style="width: 800px">
-                        <figcaption class="figure-caption">Analog cirtcuit</figcaption>
-                    </figure>
-            </div>
-
-            <div class="row">
-              <h5>Kicad: Integration on the PCB</h5>
-            </div>
-
-          <p>  When we were sure that this circuit was the perfect one for our sensor we integrated it
-          in our final PCB on kicad. The following figure shows the Kicad shematics:</p>
-          <div class="col-md-12 text-center padding-top-10">
-                  <figure class="figure">
-                      <img src="images/elec2.png" class="image-shadow figure-img img-fluid z-depth-1"
-                        alt="happy" style="width: 800px">
-                      <figcaption class="figure-caption">Kicad schematics: analog circuit integration on PCB </figcaption>
-                  </figure>
-          </div>
-
-          <p>The following figure shows the 3D view of this circuit on the PCB: </p>
-          <div class="col-md-12 text-center padding-top-10">
-                  <figure class="figure">
-                      <img src="images/elec3.png" class="image-shadow figure-img img-fluid z-depth-1"
-                        alt="happy" style="width: 800px">
-                      <figcaption class="figure-caption">3D view: analog circuit integration on PCB </figcaption>
-                  </figure>
-          </div>
-        </div>
+        <hr/>
 
 
 
@@ -1974,108 +2105,11 @@
 
 
 
-      <!--------- M&OSH------------------------>
-      <div class="row collapse" id="MOSH">
-        <div class="col-md-12 text-center padding-top-10">
-            <h3 class="section-title"> Microcontrollers & Open Source Hardware</h3>
-
-        </div>
-        <div class="row">
-          <p>After we manufactured the sensor, did the integration in an electronic circuit, the purpose
-             of this Microcontrollers & Open Source Hardware is to realise a connected gas sensor.
-             The system had to be able to send data over the web with Lora technology and had to be plug with a
-             special shield on an Arduino. The main part of this project were:</p>
-             <ul class="benefits">
-               <li><i class="fas fa-check"></i> Firstly, Create a custom Arduino Shield for the whole system </li>
-               <li><i class="fas fa-check"></i> Secondly, Send data to internet through a Lora radio </li>
-               <li> <i class="fas fa-check"></i>Finaly, Exploit received data with Node-Red</li>
-             </ul>
-        </div>
-        <div class="row">
-          <h4>Create a shield with Kicad</h4>
-        </div>
-        <div>
-          <p>In order to create a custom Arduino Shield that allows to accommodate all the elements, we used the
-            software Kicad. We integrated the electronic circuit and the chip that
-            enables us to communicate by LoRa (RN2483 chip).</p>
-            <div class="row">
-              <h5>Built Schematics:</h5>
-            </div>
-          <p>The first step in Kicad was to create all the schmatics needed. The next figure show our shematic :</p>
-            <div class="col-md-12 text-center padding-top-10">
-                    <figure class="figure">
-                        <img src="images/kicad1.png" class="image-shadow figure-img img-fluid z-depth-1"
-                          alt="happy" style="width: 800px">
-                        <figcaption class="figure-caption">shield's schmatic</figcaption>
-                    </figure>
-            </div>
-            <p>The shematic is composed of four parts: Amplifier stage (see the Analog Electronic Labs), LoRa chip (RN2483), Arduino chip, and the gas sensor connection.</p>
-            <div class="row">
-              <h5>Final PCB:</h5>
-            </div>
-
-          <p>Once the schematics done and connected all the pins of each element the final PCB can be built as follows: </p>
-          <div class="col-md-12 text-center padding-top-10">
-                  <figure class="figure">
-                      <img src="images/kicad2.png" class="image-shadow figure-img img-fluid z-depth-1"
-                        alt="happy" style="width: 600px">
-                      <figcaption class="figure-caption">Kicad PCB 2D view </figcaption>
-                  </figure>
-          </div>
-
-          <div class="col-md-12 text-center padding-top-10">
-                  <figure class="figure">
-                      <img src="images/kicad3.png" class="image-shadow figure-img img-fluid z-depth-1"
-                        alt="happy" style="width: 600px">
-                      <figcaption class="figure-caption">Kicad PCB 3D view </figcaption>
-                  </figure>
-          </div>
-          <div class="row">
-            <h4>Read the sensor data and send them through a LoRa radio</h4>
-          </div>
-          <p>Once our sensor manufactured and we got the its PCB for Arduino, we can now monitor its data.
-            In fact, we used an Arduino with a LoRa radio module (the RN2483) the build this connected gas sensor.
-          Then, we communicated with the a gateway situated at the roof of the GEI building.
-        To do that, we used The Things Network (TTN) library and implementd an Arduino code (C++) to send the GEI's gateway.
-      Consequently, we were abe to send the sensor data values and monitor them from the TNN server of the gateway. The next figure
-    shows some data monitored on the TTN server: </p>
-
-        <div class="col-md-12 text-center padding-top-10">
-                <figure class="figure">
-                    <img src="images/ttn.png" class="image-shadow figure-img img-fluid z-depth-1"
-                      alt="happy" style="width: 600px">
-                    <figcaption class="figure-caption">Gas sensor monitoring on TTN</figcaption>
-                </figure>
-        </div>
-        <div class="row">
-          <h4>Monitor the sensor data with Node-Red</h4>
-        </div>
-        <p>In order to get an user friendly interface, we built an Human-Machine interface by using Node-Red.
-          We created a dashboard that allows us to monitor the gas sensor's measurements, and display them in a
-        intuitive way for the user (graph/figure that shows the evolutions).</p>
-        <p> The next figure shows the Node-Red flow created: </p>
-        <div class="col-md-12 text-center padding-top-10">
-                <figure class="figure">
-                    <img src="images/node-red.png" class="image-shadow figure-img img-fluid z-depth-1"
-                      alt="happy" style="width: 600px">
-                    <figcaption class="figure-caption">Node-Red flow</figcaption>
-                </figure>
-        </div>
-        <p> It is composed of the payload reception (ttn uplink: from the TTN node-red library),
-          a function allowing us to decode the payload received from TNN, and the two intuitive
-          displays in the dashboard.</p>
-        <p> The next figure shows the final dashboard: </p>
-        <div class="col-md-12 text-center padding-top-10">
-                <figure class="figure">
-                    <img src="images/node-red2.png" class="image-shadow figure-img img-fluid z-depth-1"
-                      alt="happy" style="width: 600px">
-                    <figcaption class="figure-caption">Node-Red DashBoard HMI</figcaption>
-                </figure>
-        </div>
-        </div>
 
 
-      </div>
+
+
+
 
 
 
@@ -2095,7 +2129,6 @@
 
  <div class="row">
    <div class="col-md-12 text-center padding-top-10">
-   <hr/>
      <i class="fas fa-tasks fa-3x"></i>
      <h3> Developped skills and knowledge </h3>
 
@@ -2262,6 +2295,454 @@
 
 
 </section>
+<!-- end smart device section -->
+
+<!-- Start communication section  -->
+<section class="section-grey" id="ProtocolCommunication">
+
+  <div class="container">
+      <!--begin row-->
+      <div class="row">
+        <div class="col-md-12 text-center padding-bottom-10">
+
+            <h2 class="section-title">Protocols and Communication</h2>
+
+            <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#PFS" aria-expanded="false" aria-controls="collapseOne">
+
+              <div class="hovereffect">
+                  <img class="img-responsive" width="300" height="150" src="images/hoverPFS.png" alt="">
+                  <div class="overlay">
+                          <h2>Protocols for Sensor
+                            Network</h2>
+                     <a class="info"><h3>Discover</h3></a>
+                  </div>
+              </div>
+
+
+            </button>
+            <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#EN" aria-expanded="false" aria-controls="collapseOne">
+              <div class="hovereffect">
+                  <img class="img-responsive" width="300" height="150" src="images/hoverEN.jpg" alt="">
+                  <div class="overlay">
+                          <h2>Emerging Networks</h2>
+                     <a class="info"><h3>Discover</h3></a>
+                  </div>
+              </div>
+
+            </button>
+            <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#fiveg" aria-expanded="false" aria-controls="collapseOne">
+              <div class="hovereffect">
+                  <img class="img-responsive" width="300" height="150" src="images/hover3Gt5G.jpg" alt="">
+                  <div class="overlay">
+                          <h2>From 3G to 5G</h2>
+                     <a class="info"><h3>Discover</h3></a>
+                  </div>
+              </div>
+
+            </button>
+
+            <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#ECO" aria-expanded="false" aria-controls="collapseOne">
+              <div class="hovereffect">
+                  <img class="img-responsive" width="300" height="150" src="images/hoverECO.jpg" alt="">
+                  <div class="overlay">
+                          <h2>Energy for connected objects</h2>
+                     <a class="info"><h3>Discover</h3></a>
+                  </div>
+              </div>
+
+            </button>
+
+            <button class="btn btn-link  active collapsed" type="button" data-toggle="collapse" data-target="#Secu" aria-expanded="false" aria-controls="collapseOne">
+              <div class="hovereffect">
+                  <img class="img-responsive" width="300" height="150" src="images/hoverSecu.jpg" alt="">
+                  <div class="overlay">
+                          <h2>Security</h2>
+                     <a class="info"><h3>Discover</h3></a>
+                  </div>
+              </div>
+
+            </button>
+
+
+        </div>
+      </div>
+
+
+  </div>
+
+
+
+
+  <div class="container">
+      <!-- ------- Security  -------------- -->
+      <div class="row collapse" id="Secu">
+        <div class="col-md-12 text-center padding-top-10">
+            <h4 class="section-title"> Security For connected objects</h4>
+
+        </div>
+        <div class="row">
+          <p>The purpose of this lab is to apply the concepts of semantic data seen in the theoretical courses. The main goals were :</p>
+
+
+          <ul class="benefits">
+            <li><i class="fas fa-check"></i> Create an ontology with the software Protégé </li>
+            <li><i class="fas fa-check"></i> Create a Java application that enrich this ontology, and exploit it</li>
+            <li> <i class="fas fa-check"></i>Applicate the concepts of semantic data in an IoT context</li>
+          </ul>
+          <p>The semantic web enabled us to structure data that are on the web to better exploit them. The semantic web provides a set of functions that offers a common structure to all data on the web. It enables an automatic treatment. </p>
+
+
+        </div>
+        <div class="col-md-12 padding-top-10">
+            <p> You can find next my full report:</p>
+
+              <a href="images/semantic.pdf" class="btn-Green small scrool">Download full report</a>
+        </div>
+
+
+
+
+
+
+
+      </div>
+
+
+      <!--------- Energy for connected------------------------>
+      <div class="row collapse" id="ECO">
+        <div class="col-md-12 text-center padding-top-10">
+            <h4 class="section-title"> Energy For connected objects</h4>
+
+        </div>
+        <div class="row">
+          <p>During this Theory of Iventive Problem Solving courses we discovered how to solve an inventive problem in a project. In pairs we had to solve this problem on a specific object. </p>
+          <p>Our chosen object was italian coffee maker. We used all the tools of the course to study this object in order to innovate it. </p>
+
+          <p> You can find next my study report of this object.</p>
+
+
+
+        </div>
+
+        <a href="images/bigDataReport.pdf" class="btn-Green small scrool">Download full report</a>
+
+
+
+
+      </div>
+
+      <!--------- 3G to 5G------------------------>
+      <div class="row collapse" id="fiveg">
+        <div class="col-md-12 text-center padding-top-10">
+            <h4 class="section-title"> From 3G to 5G</h4>
+
+        </div>
+        <div class="row">
+          <p>During this Theory of Iventive Problem Solving courses we discovered how to solve an inventive problem in a project. In pairs we had to solve this problem on a specific object. </p>
+          <p>Our chosen object was italian coffee maker. We used all the tools of the course to study this object in order to innovate it. </p>
+
+          <p> You can find next my study report of this object.</p>
+
+
+
+        </div>
+
+        <a href="images/bigDataReport.pdf" class="btn-Green small scrool">Download full report</a>
+
+
+
+
+      </div>
+
+      <!--------- Emerging Networks------------------------>
+      <div class="row collapse" id="EN">
+        <div class="col-md-12 text-center padding-top-10">
+            <h4 class="section-title">Emerging Networks</h4>
+
+        </div>
+        <div class="row">
+          <p>During this Theory of Iventive Problem Solving courses we discovered how to solve an inventive problem in a project. In pairs we had to solve this problem on a specific object. </p>
+          <p>Our chosen object was italian coffee maker. We used all the tools of the course to study this object in order to innovate it. </p>
+
+          <p> You can find next my study report of this object.</p>
+
+
+
+        </div>
+
+        <a href="images/bigDataReport.pdf" class="btn-Green small scrool">Download full report</a>
+
+
+
+
+      </div>
+
+
+      <!--------- Protocols for Wireless Sensor Network------------------------>
+      <div class="row collapse" id="PFS">
+        <div class="col-md-12 text-center padding-top-10">
+            <h4 class="section-title">Protocols for Wireless Sensor Network</h4>
+
+        </div>
+        <div class="row">
+          <p>During this Protocols for Wireless Sensor Network courses
+            we discovered protocols and standards used in Wireless Sensor Network.
+            Nowadays, wireless communications are at the center of IoT.  Many protocols exist and are designed for different purposes. Some have a long range and a
+            low data rate and other are designed for short range but have a higher data rate.
+            Thus, the purpose was to compare them in order to know which protocol we can use for each system/use case (in terms of cost, range, energy, security). </p>
+            <div>
+            <div class="row">
+                <h5> LoRa Protocol </h5>
+
+            </div>
+
+            <p>I was in charge of doing a state of the art on the protocol LoRa with two of my classmates.
+            </p>
+            <p>LoRa (Long Range) is a low-power wide-area network (LPWAN) protocol that enables
+               long-range transmissions (more than 10km in rural areas) with low power consumption. </p>
+
+          <p> You can find next my study report and slide.</p>
+
+
+          <a href="images/LoraReport.pdf" class="btn-Green small scrool">Download LoRa report</a>
+          <a href="images/LoraSlide.pdf" class="btn-Green small scrool">Download LoRa Slide</a>
+
+
+          <br>
+            <br>
+          <div class="row">
+            <h5> MAC Layers for WSN </h5>
+
+          </div>
+
+          <p>In order to understand how these protocols work at all levels,
+          it is important to understand the MAC layer.
+          As part of my learning, I realized a report on MAC Layers designed for IoT.
+          The objective was to make a state of the art and a comparison of the different
+          Mac layers for Wireless Sensor Network. With the emergence of wireless sensor network,
+          new protocols have been implemented. It is important to know them and to understand how MAC
+          layer has a primordial role to play in systems’ communication.
+        </p>
+        <p>MAC Layer is the second layer in the seven-layer OSI model for network protocols.
+          The OSI (Open Systems Interconnection) is a conceptual model which characterizes
+           and standardizes the functions of communication systems. The next figure shows the different layers of OSI </p>
+
+            <p> You can find next my wsn report and slide:</p>
+                <a href="images/WSN.pdf" class="btn-Green small scrool">Download MAC layers for WSN report</a>
+    <a href="images/WSNSlide.pdf" class="btn-Green small scrool">Download MAC layers for WSN Slide</a>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+      </div>
+  </div>
+
+
+
+
+
+
+
+  <!-- -------------------------------- Mobilized skills------------------------------------- -->
+
+
+ <div class="row">
+   <div class="col-md-12 text-center padding-top-10">
+   <hr/>
+     <i class="fas fa-tasks fa-3x"></i>
+     <h3> Developped skills and knowledge </h3>
+
+
+   </div>
+
+           <div class="col-md-4 mx-auto padding-top-10">
+           <button type="button" class="btn btn-outline-secondary collapsed" data-bs-toggle="button" autocomplete="off"   data-toggle="collapse" data-target="#skillsSemantic" aria-expanded="false" aria-controls="collapseOne">
+
+
+               <span>Show Processing Semantic Data</span>
+
+           </button>
+
+           </div>
+
+
+           <div class="col-md-4 mx-auto padding-top-10">
+           <button type="button" class="btn btn-outline-secondary collapsed" data-bs-toggle="button" autocomplete="off" data-toggle="collapse" data-target="#skillsBigData" aria-expanded="false" aria-controls="collapseOne">
+
+
+               <span>Show Data Processing and Analysis: Big Data</span>
+
+           </button>
+
+          </div>
+
+
+
+         <div class="col-md-8 mx-auto text-center padding-top-10">
+           <ul class="progress-list collapse" id="skillsBigData">
+
+             <hr/>
+             <h5> Data Processing and Analysis: Big Data</h5>
+             <li>
+                 <p></p>
+                 <div class="progress" style="height: 20px;">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Know how to explore and represent data sets</b></div>
+                 </div>
+                 <p>We used several datasets in the practical work (CSV files). In fact, we learnt how to explore and
+                   organise them in order to do some plots (ggplots) and consequently represent them with some charts and bar plots.</p>
+             </li>
+
+             <li>
+                 <p></p>
+                 <div class="progress" style="height: 20px;">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Master R</b></div>
+                 </div>
+                 <p> During our practical work and our project we worked with the R language. We
+                   consequently learnt the subtlety and the power of this language for the data processing and interpretation.</p>
+             </li>
+
+             <li>
+                 <p></p>
+                 <div class="progress" style="height: 20px;">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Master complexity associated to statistical data processing and know the techniques to be used to minimise them.</b></div>
+                 </div>
+                 <p> We saw in the lecture the basis of data processing and its  statistical complexity,
+                   I know how to compare the complexity between different problems. However, I did not practise enough to get a level of control. </p>
+             </li>
+
+
+              </ul>
+
+         </div>
+
+
+
+
+         <div class="col-md-8 mx-auto text-center padding-top-10">
+           <ul class="progress-list collapse" id="skillsSemantic">
+             <hr/>
+             <h5>Processing Semantic Data</h5>
+             <li>
+                 <p></p>
+                 <div class="progress" style="height: 20px;">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Design and understand a model for an application</b></div>
+                 </div>
+                 <p> With the theoretical lessons and their application in pratical labs, I understood the basis of the semantic data processing.</p>
+             </li>
+
+             <li>
+                 <p></p>
+                 <div class="progress" style="height: 20px;">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Know how to infer new knowlegde from a knowledge base</b></div>
+                 </div>
+                 <p> In the first lab, we infred new knowledge by the reasoner "HermiT" which can deduce new knowledge from the relations between objects created in the ontology.</p>
+             </li>
+
+             <li>
+                 <p></p>
+                 <div class="progress" style="height: 20px;">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Be able to enrich data with semantic meta-data</b></div>
+                 </div>
+                 <p> During lab lessons on semantic web, we created a Java code which was able to automatically enrich data with semantic meta-data thanks to the ontology we had created.</p>
+             </li>
+              </ul>
+
+         </div>
+
+         <div class="col-md-8 mx-auto text-center padding-top-10">
+           <ul class="progress-list collapse" id="skillsTeamwork">
+             <hr/>
+             <h5> Learn teamwork</h5>
+             <li>
+                 <p></p>
+                 <div class="progress" style="height: 20px;">
+                     <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 100%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Multi-disciplinary students work as a team</b></div>
+                 </div>
+                 <p> In all project I worked with students that have different backgrounds. It was very intresting insofar as each member can share its knowledge to others and consequently learn a lot </p>
+             </li>
+
+
+              </ul>
+
+         </div>
+
+
+         <div class="col-md-8 mx-auto text-center padding-top-10">
+           <ul class="progress-list collapse" id="skillsManage">
+             <hr/>
+             <h5> Manage an innovative project</h5>
+             <li>
+               <li>
+                   <p></p>
+                   <div class="progress" style="height: 20px;">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Solve a problem in a creative way</b></div>
+                   </div>
+                   <p> We needed to be creative to solve issues in many of projects. Moreover the Theory of Iventive Problem Solving courses enabled us to learn how to be us creative methods in the studies done. </p>
+               </li>
+
+               <li>
+                   <p></p>
+                   <div class="progress" style="height: 20px;">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 90%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Develop the first stage of innovation </b></div>
+                   </div>
+                   <p> During the Theory of Iventive Problem Solving lectures, we dicovered methods to develop the first stage of innovation. </p>
+               </li>
+
+               <li>
+                   <p></p>
+                   <div class="progress" style="height: 20px;">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 85%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>Understand innovation's production, validation, distribution, acceptability, and aftermath</b></div>
+                   </div>
+                   <p> In the humanities courses we had to think about the importance of the production, validation, distribution, acceptability, and aftermath in our projects. As example, in the psychology lessons we had to think about the ethical part of our project and its aftermath </p>
+               </li>
+               <li>
+                   <p></p>
+                   <div class="progress" style="height: 20px;">
+                       <div class="progress-bar progress-bar-striped progress-bar-animated" role="progressbar" style="width: 80%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><b>structure and lead an innovative project</b></div>
+                   </div>
+                   <p> In the humanities lessons we learned how to lead a project. We applied this lessons on our projects. </p>
+               </li>
+
+
+              </ul>
+
+         </div>
+
+  </div>
+
+      <!--end progress-list -->
+
+
+      <!-- Conclusion ------------------------- -->
+      <div class="col-md-12 mx-auto text-center padding-top-10">
+        <div class="col-md-12 text-center padding-top-10">
+
+          <i class="fas fa-star fa-3x"></i>
+          <h3> Conclusion </h3>
+
+        </div>
+        <p> Theses courses, labs, and projects of data engineering enabled me to get a
+          background in how we do analysis of data. I've already had a background in semantic web, but
+        this year we've gone deeper with a Java-Based implementation of semantic data. Finally,these courses showed
+      how important is processing and representig data. </p>
+      </div>
+
+
+</section>
+
+
+
+
 
 
 
